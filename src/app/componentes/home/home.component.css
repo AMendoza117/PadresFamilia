@@ -1,0 +1,48 @@
+/* home.component.css */
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: auto;
+  }
+  
+  video {
+    width: 100%; /* Hacer que el video sea responsivo */
+    height: auto;
+    margin-bottom: 20px; /* Añadir margen inferior */
+  }
+  
+  .campus-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* El ancho de los botones ocupará la pantalla completa */
+  }
+  
+  .campus-button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 100%; /* Hacer que los botones ocupen todo el ancho disponible */
+  }
+  
+  .campus-button:hover {
+    background-color: #45a049;
+  }
+  

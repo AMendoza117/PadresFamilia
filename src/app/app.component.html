@@ -1,5 +1,7 @@
 <body>
     <app-nav></app-nav>
-    <app-breadcrumb></app-breadcrumb>
+    <button style="border-radius: 10px; margin: 10px;" (click)="toggleTTS()" [ngClass]="{'enabled': isTTSEnabled, 'disabled': !isTTSEnabled}">
+        <i [ngClass]="{ 'fas': true, 'fa-volume-up': isTTSEnabled, 'fa-volume-off': !isTTSEnabled }"></i>
+      </button>
     <router-outlet></router-outlet>
 </body>

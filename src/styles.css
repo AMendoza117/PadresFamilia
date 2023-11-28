@@ -1,4 +1,5 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~@fortawesome/fontawesome-free/css/all.css';
 
 body {
   background-color: #fff;
@@ -20,4 +21,22 @@ body {
 
 .navbar-dark .navbar-nav .nav-link {
   color: white;
+}
+
+.floating-button {
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.enabled {
+  background-color: blue;
+  color: white;
+}
+
+.disabled {
+  background-color: white;
+  color: black;
 }

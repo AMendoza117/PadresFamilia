@@ -11,6 +11,7 @@ import { TurismoComponent } from './turismo/turismo.component';
 import { ContrastButtonComponent } from './contrast-button/contrast-button.component';
 import { BreadcrumbComponent } from './componentes/breadcrumb/breadcrumb.component';
 import { HomeComponent } from './componentes/home/home.component';
+import { BotonDudasComponent } from './componentes/boton-dudas/boton-dudas.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomeComponent } from './componentes/home/home.component';
     TurismoComponent,
     ContrastButtonComponent,
     BreadcrumbComponent,
-    HomeComponent
+    HomeComponent,
+    BotonDudasComponent
   ],
   imports: [
     BrowserModule,
