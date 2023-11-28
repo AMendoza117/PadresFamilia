@@ -42,12 +42,12 @@
     <!-- Contenido de pestañas -->
     <div class="tab-content mt-3">
       <div class="tab-pane fade show active" *ngIf="contenido == 'Perfil'" id="contenido1">
-        <h2>Perfil de Ingreso</h2>
-        <p>El aspirante deberá ser egresado en educación media superior, preferentemente de las áreas de Económico Administrativo, Humanidades o áreas afines; así como mostrar interés por los idiomas y disposición para relacionarse con personas de diversas culturas y nacionalidades.</p>
+        <h2 class="titulo-carrera">Perfil de Ingreso</h2>
+        <p class="texto-carrera">El aspirante deberá ser egresado en educación media superior, preferentemente de las áreas de Económico Administrativo, Humanidades o áreas afines; así como mostrar interés por los idiomas y disposición para relacionarse con personas de diversas culturas y nacionalidades.</p>
       </div>
       <div class="tab-pane fade show active" *ngIf="contenido == 'Competencias'" id="contenido2">
-        <h2>Competencias Específicas Adquiridas</h2>
-        <p>Promocionar y desarrollar destinos turísticos con base en las necesidades actuales del sector.
+        <h2 class="titulo-carrera">Competencias Específicas Adquiridas</h2>
+        <p class="texto-carrera">Promocionar y desarrollar destinos turísticos con base en las necesidades actuales del sector.
           Participar activamente en la operación de hoteles, agencia de viajes, organización de eventos, elaboración de planes y proyectos turísticos.
           Dirigir empresas turísticas públicas y privadas.
           Colaborar con los prestadores de productos y servicios en eventos de promoción turística.
@@ -55,8 +55,8 @@
           Dominio de idiomas, inglés y francés.</p>
       </div>
       <div class="tab-pane fade show active" *ngIf="contenido == 'Ocupaciones'" id="contenido3">
-        <h2>Ocupaciones Profesionales</h2>
-        <p>Coordinador de empresas del sector turístico, público o privado.
+        <h2 class="titulo-carrera">Ocupaciones Profesionales</h2>
+        <p class="texto-carrera">Coordinador de empresas del sector turístico, público o privado.
           Coordinador de hoteles, restaurantes, banquetes, organizadoras de eventos y spa.
           Asesor en agencias u operadoras de viajes.
           Supervisor de lugares naturales, culturales, regionales, zonas arqueológicas y museos.
@@ -67,5 +67,5 @@
     </div>
   
     <!-- Botón para descargar el PDF -->
-    <button class="btn btn-primary mt-3">Descargar Mapa Curricular</button>
+    <button class="btn btn-primary mt-3" (click)="descargarCur()">Descargar Mapa Curricular</button>
   </div>

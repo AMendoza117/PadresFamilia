@@ -95,3 +95,13 @@
     cursor: pointer;
     color: gray;
   }
+
+  .texto-carrera{
+    font-size: large;
+    color: gray;
+  }
+
+  .titulo-carrera{
+    font-size: x-large;
+    color: #007bff;
+  }

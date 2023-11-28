@@ -8,6 +8,7 @@ import { DudasComponent } from './componentes/dudas/dudas.component';
 import { NavComponent } from './componentes/nav/nav.component';
 import { CarrerasComponent } from './carreras/carreras.component';
 import { TurismoComponent } from './turismo/turismo.component';
+import { ContrastButtonComponent } from './contrast-button/contrast-button.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TurismoComponent } from './turismo/turismo.component';
     DudasComponent,
     NavComponent,
     CarrerasComponent,
-    TurismoComponent
+    TurismoComponent,
+    ContrastButtonComponent
   ],
   imports: [
     BrowserModule,

@@ -24,4 +24,8 @@ export class TurismoComponent implements OnInit {
   regresarCarreras() {
     this.router.navigate(['/carreras']);
   }
+
+  descargarCur(){
+    window.open("assets/images/TurismoPlanDeEstudios.pdf", "_blank");
+  }
 }
