@@ -1,14 +1,23 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
 body {
-    background-color: #fff;
-    color: #fff;
-    height: 100vh;
-  }
-  
+  background-color: #fff;
+  color: #fff;
+  height: 100vh;
+}
+
 .high-contrast {
-    filter: invert(1) hue-rotate(180deg);
+  filter: invert(1) hue-rotate(180deg);
 }
 
 .high-contrast img {
-    filter: invert(1) hue-rotate(180deg);
-  }
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.bg-color {
+  background-color: #003366 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}

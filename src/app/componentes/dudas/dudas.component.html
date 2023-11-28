@@ -1,5 +1,3 @@
-<!-- faq.component.html -->
-
 <div class="container mt-4">
     <h2>Preguntas Frecuentes</h2>
 
@@ -13,21 +11,21 @@
     </div>
 
     <!-- Lista de preguntas frecuentes -->
-    <div *ngFor="let faq of filteredFaqs" class="card mt-2">
-        <div class="card-header">
-            <h5 class="mb-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse"
-                    [attr.data-target]="'#faqCollapse' + faq.pregunta" aria-expanded="true">
+    <div class="accordion" id="accordionExample">
+        <div *ngFor="let faq of filteredFaqs" class="accordion-item">
+            <h2 class="accordion-header" [attr.id]="'heading' + faq.id">
+                <button class="accordion-button" type="button" [attr.data-bs-toggle]="'collapse'"
+                    [attr.data-bs-target]="'#collapse' + faq.id" [attr.aria-expanded]="faq.expanded"
+                    [attr.aria-controls]="'collapse' + faq.id" (click)="toggleAccordion(faq)">
                     {{ faq.pregunta }}
                 </button>
-            </h5>
-        </div>
-
-        <div [attr.id]="'faqCollapse' + faq.pregunta" class="collapse">
-            <div class="card-body">
-                {{ faq.respuesta }}
+            </h2>
+            <div [attr.id]="'collapse' + faq.id" class="accordion-collapse collapse"
+                [attr.aria-labelledby]="'heading' + faq.id" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    {{ faq.respuesta }}
+                </div>
             </div>
         </div>
     </div>
-
 </div>

@@ -1,6 +1,12 @@
+// dudas.component.ts
+
 import { Component, OnInit } from '@angular/core';
 import { FaqService } from './../../services/faq.services';
 import { FaqItem } from 'src/app/models/faq.model';
+
+interface FaqWithState extends FaqItem {
+  expanded: boolean;
+}
 
 @Component({
   selector: 'app-dudas',
@@ -9,13 +15,13 @@ import { FaqItem } from 'src/app/models/faq.model';
 })
 export class DudasComponent implements OnInit {
 
-  faqList: FaqItem[] = [];
-  filteredFaqs: FaqItem[] = [];
+  faqList: FaqWithState[] = [];
+  filteredFaqs: FaqWithState[] = [];
 
-  constructor(private faqService: FaqService) {}
+  constructor(private faqService: FaqService) { }
 
   ngOnInit(): void {
-    this.faqList = this.faqService.getFaqs();
+    this.faqList = this.faqService.getFaqs().map((faq, index) => ({ ...faq, id: index + 1, expanded: false }));
     this.filteredFaqs = this.faqList;
   }
 
@@ -29,5 +35,9 @@ export class DudasComponent implements OnInit {
           faq.respuesta.toLowerCase().includes(term.toLowerCase())
       );
     }
+  }
+
+  toggleAccordion(faq: FaqWithState): void {
+    faq.expanded = !faq.expanded;
   }
 }

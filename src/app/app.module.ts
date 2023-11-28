@@ -9,6 +9,8 @@ import { NavComponent } from './componentes/nav/nav.component';
 import { CarrerasComponent } from './carreras/carreras.component';
 import { TurismoComponent } from './turismo/turismo.component';
 import { ContrastButtonComponent } from './contrast-button/contrast-button.component';
+import { BreadcrumbComponent } from './componentes/breadcrumb/breadcrumb.component';
+import { HomeComponent } from './componentes/home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ContrastButtonComponent } from './contrast-button/contrast-button.compo
     NavComponent,
     CarrerasComponent,
     TurismoComponent,
-    ContrastButtonComponent
+    ContrastButtonComponent,
+    BreadcrumbComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
