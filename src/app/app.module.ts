@@ -11,7 +11,12 @@ import { TurismoComponent } from './turismo/turismo.component';
 import { ContrastButtonComponent } from './contrast-button/contrast-button.component';
 import { BreadcrumbComponent } from './componentes/breadcrumb/breadcrumb.component';
 import { HomeComponent } from './componentes/home/home.component';
+<<<<<<< HEAD
 import { BotonDudasComponent } from './componentes/boton-dudas/boton-dudas.component';
+=======
+import { ExitosComponent } from './componentes/exitos/exitos.component';
+import { CasoexitoComponent } from './componentes/casoexito/casoexito.component';
+>>>>>>> origin/exito
 
 @NgModule({
   declarations: [
@@ -23,7 +28,12 @@ import { BotonDudasComponent } from './componentes/boton-dudas/boton-dudas.compo
     ContrastButtonComponent,
     BreadcrumbComponent,
     HomeComponent,
+<<<<<<< HEAD
     BotonDudasComponent
+=======
+    ExitosComponent,
+    CasoexitoComponent
+>>>>>>> origin/exito
   ],
   imports: [
     BrowserModule,
