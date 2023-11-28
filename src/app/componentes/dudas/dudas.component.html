@@ -1,1 +1,33 @@
-<p>dudas works!</p>
+<!-- faq.component.html -->
+
+<div class="container mt-4">
+    <h2>Preguntas Frecuentes</h2>
+
+    <!-- Buscador -->
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Buscar pregunta..."
+            (input)="search($event.target.value)" />
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" (click)="search('')">Limpiar</button>
+        </div>
+    </div>
+
+    <!-- Lista de preguntas frecuentes -->
+    <div *ngFor="let faq of filteredFaqs" class="card mt-2">
+        <div class="card-header">
+            <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse"
+                    [attr.data-target]="'#faqCollapse' + faq.pregunta" aria-expanded="true">
+                    {{ faq.pregunta }}
+                </button>
+            </h5>
+        </div>
+
+        <div [attr.id]="'faqCollapse' + faq.pregunta" class="collapse">
+            <div class="card-body">
+                {{ faq.respuesta }}
+            </div>
+        </div>
+    </div>
+
+</div>
