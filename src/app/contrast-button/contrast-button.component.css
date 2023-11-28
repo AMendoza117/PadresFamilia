@@ -1,0 +1,55 @@
+button {
+    position: relative;
+    background-color: #f2f2f2;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 20px;
+    outline: none;
+    overflow: hidden;
+    width: 60px;
+    height: 30px;
+    transition: background-color 0.3s;
+  }
+  
+  button:focus {
+    box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.3);
+  }
+  
+  button .switch {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translate(0, -50%);
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: left 0.3s;
+  }
+  
+  button .light {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translate(0, -50%);
+    width: 26px;
+    height: 26px;
+    background-color: #ffd740;
+    border-radius: 50%;
+    transition: left 0.3s, background-color 0.3s;
+  }
+  
+  button.active {
+    background-color: #2196F3; /* Color cuando está activo */
+    color: #fff;
+  }
+  
+  button.active .switch {
+    left: calc(100% - 27px);
+  }
+  
+  button.active .light {
+    left: calc(100% - 4px);
+    background-color: #4caf50;
+  }

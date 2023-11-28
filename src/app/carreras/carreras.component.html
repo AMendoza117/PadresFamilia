@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="search-bar">
+                <input type="text" class="form-control search-input" placeholder="Buscar..." (input)="searchCarreras($event)">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="filter-buttons">
+                <div class="btn btn-primary filter-button ti" (click)="filterByType('ti')">Tecnologico Industrial</div>
+                <div class="btn btn-danger filter-button ea" (click)="filterByType('ea')">Economico Administrativo</div>
+                <div class="btn btn-success filter-button iee" (click)="filterByType('iee')">IEE</div>
+                <div class="btn btn-secondary filter-button todos" (click)="filterByType('todos')">Mostrar Todos</div>
+            </div>
+        </div>
+    </div>
+    <div class="row card-container">
+        <div *ngFor="let carrera of carreras" class="col-md-4 mb-3 carrera-card">
+            <div [ngClass]="['card', carrera.type]" *ngIf="carrera.showBusqueda && carrera.showFiltro" (click)="redirectToPage(carrera.pagina)" style="display: flex; align-items: center;">
+                <img [src]="carrera.image" alt="{{ carrera.name }}" class="mt-3" style="max-width: 80%; margin-bottom: 10px;">
+                <h4 class="carrera-text">{{ carrera.name }}</h4>
+            </div>
+        </div>
+    </div>
+</div>

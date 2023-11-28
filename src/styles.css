@@ -1,1 +1,14 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
+body {
+    background-color: #fff;
+    color: #fff;
+    height: 100vh;
+  }
+  
+.high-contrast {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+.high-contrast img {
+    filter: invert(1) hue-rotate(180deg);
+  }

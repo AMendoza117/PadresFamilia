@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <!-- Logotipo (puedes ajustar la posición según sea necesario) -->
   <a class="navbar-brand" href="#">
-    <img src="./../../../assets/images/logoutng.webp" alt="Logotipo" height="30" routerLink="/">
+    <img src="./../../../assets/images/logoutng.webp" class="logoUtng" alt="Logotipo" height="30">
   </a>
 
   <!-- Botón de alternancia para pantallas pequeñas -->
@@ -15,10 +15,13 @@
   <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
+        <app-contrast-button> </app-contrast-button>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" routerLink="/">Inicio</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/acerca">Carreras</a>
+        <a class="nav-link" routerLink="/carreras">Carreras</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/contacto">Becas</a>
