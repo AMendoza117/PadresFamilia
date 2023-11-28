@@ -1,20 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DudasComponent } from './componentes/dudas/dudas.component';
 import { NavComponent } from './componentes/nav/nav.component';
+import { CarrerasComponent } from './carreras/carreras.component';
+import { TurismoComponent } from './turismo/turismo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DudasComponent,
-    NavComponent
+    NavComponent,
+    CarrerasComponent,
+    TurismoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

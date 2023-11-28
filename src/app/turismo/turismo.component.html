@@ -1,0 +1,71 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a (click)="regresarCarreras()">Carreras</a></li>
+    <li class="breadcrumb-actual active" aria-current="page">­ / Turismo</li>
+  </ol>
+</nav>
+<div class="collage-container">
+    <div class="collage">
+      <!-- Imágenes del collage -->
+      <!-- Ajusta las imágenes según sea necesario -->
+      <img src="assets/images/turismo1.jpg" alt="Imagen 1">
+      <img src="assets/images/turismo2.jpg" alt="Imagen 2">
+      <img src="assets/images/turismo3.jpg" alt="Imagen 3">
+      <img src="assets/images/turismo4.jpg" alt="Imagen 4">
+      <img src="assets/images/turismo5.jpg" alt="Imagen 5">
+      <img src="assets/images/turismo6.jpg" alt="Imagen 6">
+      <img src="assets/images/turismo7.jpg" alt="Imagen 7">
+      <img src="assets/images/turismo8.jpg" alt="Imagen 8">
+      <img src="assets/images/turismo9.jpg" alt="Imagen 9">
+      <img src="assets/images/turismo10.jpg" alt="Imagen 10">
+      <!-- Agrega más imágenes según sea necesario -->
+  
+      <!-- Texto sobre las imágenes -->
+      <h1 class="text-overlay">Carrera de Turismo</h1>
+    </div>
+  </div>
+  
+  <div class="container mt-5">
+    <!-- Contenedor de pestañas -->
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" [ngClass]="{'active': contenido == 'Perfil'}" id="tab1" data-toggle="tab" (click)="activar('Perfil')">Perfil de Ingreso</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [ngClass]="{'active': contenido == 'Competencias'}" id="tab2" data-toggle="tab" (click)="activar('Competencias')">Ocupaciones Profesionales<</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [ngClass]="{'active': contenido == 'Ocupaciones'}" id="tab3" data-toggle="tab" (click)="activar('Ocupaciones')">Ocupaciones Profesionales</a>
+      </li>
+    </ul>
+  
+    <!-- Contenido de pestañas -->
+    <div class="tab-content mt-3">
+      <div class="tab-pane fade show active" *ngIf="contenido == 'Perfil'" id="contenido1">
+        <h2>Perfil de Ingreso</h2>
+        <p>El aspirante deberá ser egresado en educación media superior, preferentemente de las áreas de Económico Administrativo, Humanidades o áreas afines; así como mostrar interés por los idiomas y disposición para relacionarse con personas de diversas culturas y nacionalidades.</p>
+      </div>
+      <div class="tab-pane fade show active" *ngIf="contenido == 'Competencias'" id="contenido2">
+        <h2>Competencias Específicas Adquiridas</h2>
+        <p>Promocionar y desarrollar destinos turísticos con base en las necesidades actuales del sector.
+          Participar activamente en la operación de hoteles, agencia de viajes, organización de eventos, elaboración de planes y proyectos turísticos.
+          Dirigir empresas turísticas públicas y privadas.
+          Colaborar con los prestadores de productos y servicios en eventos de promoción turística.
+          Planear y conservar el medio ambiente, así como el patrimonio cultural y natural, para ejercer y promocionar el turismo sustentable.
+          Dominio de idiomas, inglés y francés.</p>
+      </div>
+      <div class="tab-pane fade show active" *ngIf="contenido == 'Ocupaciones'" id="contenido3">
+        <h2>Ocupaciones Profesionales</h2>
+        <p>Coordinador de empresas del sector turístico, público o privado.
+          Coordinador de hoteles, restaurantes, banquetes, organizadoras de eventos y spa.
+          Asesor en agencias u operadoras de viajes.
+          Supervisor de lugares naturales, culturales, regionales, zonas arqueológicas y museos.
+          Coordinador de centros de convenciones, oficinas de congresos y visitantes.
+          Coordinar empresas organizadoras de eventos.
+          Ejercer como empresario independiente.</p>
+      </div>
+    </div>
+  
+    <!-- Botón para descargar el PDF -->
+    <button class="btn btn-primary mt-3">Descargar Mapa Curricular</button>
+  </div>
