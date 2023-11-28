@@ -11,6 +11,10 @@ import { TurismoComponent } from './turismo/turismo.component';
 import { ContrastButtonComponent } from './contrast-button/contrast-button.component';
 import { BreadcrumbComponent } from './componentes/breadcrumb/breadcrumb.component';
 import { HomeComponent } from './componentes/home/home.component';
+import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
+import { FontSizeButtonComponent } from './font-resizer/font-resizer.component';
+import { FontResizerService } from './services/font-resizer';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +25,9 @@ import { HomeComponent } from './componentes/home/home.component';
     TurismoComponent,
     ContrastButtonComponent,
     BreadcrumbComponent,
-    HomeComponent
+    HomeComponent,
+    NosotrosComponent,
+    FontSizeButtonComponent
   ],
   imports: [
     BrowserModule,
