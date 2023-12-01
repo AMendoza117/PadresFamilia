@@ -1,3 +1,4 @@
+import { FontSizeButtonComponent } from './font-resizer/font-resizer.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -9,14 +10,12 @@ import { NavComponent } from './componentes/nav/nav.component';
 import { CarrerasComponent } from './carreras/carreras.component';
 import { TurismoComponent } from './turismo/turismo.component';
 import { ContrastButtonComponent } from './contrast-button/contrast-button.component';
-import { BreadcrumbComponent } from './componentes/breadcrumb/breadcrumb.component';
 import { HomeComponent } from './componentes/home/home.component';
-<<<<<<< HEAD
-import { BotonDudasComponent } from './componentes/boton-dudas/boton-dudas.component';
-=======
 import { ExitosComponent } from './componentes/exitos/exitos.component';
 import { CasoexitoComponent } from './componentes/casoexito/casoexito.component';
->>>>>>> origin/exito
+import { MouseListenerDirective } from './TTS/mouse-listener.directive';
+import { TextToVoiceService } from './TTS/text-to-voice.service';
+import { FormModalComponent } from './form-modal/form-modal.component';
 
 @NgModule({
   declarations: [
@@ -26,21 +25,20 @@ import { CasoexitoComponent } from './componentes/casoexito/casoexito.component'
     CarrerasComponent,
     TurismoComponent,
     ContrastButtonComponent,
-    BreadcrumbComponent,
     HomeComponent,
-<<<<<<< HEAD
-    BotonDudasComponent
-=======
     ExitosComponent,
-    CasoexitoComponent
->>>>>>> origin/exito
+    CasoexitoComponent,
+    FontSizeButtonComponent,
+    MouseListenerDirective,
+    FormModalComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [TextToVoiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

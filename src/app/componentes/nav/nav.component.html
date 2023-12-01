@@ -14,29 +14,36 @@
   <!-- Elementos de la barra de navegación en el lado derecho -->
   <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
     <ul class="navbar-nav" style="margin: 10px;">
+      <!-- Botón para habilitar/deshabilitar la lectura -->
+      <button (click)="toggleReading()" [class.active]="textToVoiceService.isEnabled()" style="border-radius: 50px; margin-right: 10px;" >
+        <img *ngIf="!textToVoiceService.isEnabled()" src="../../../assets/images/text_to_speech.png" alt="Icono inactivo" />
+        <img *ngIf="textToVoiceService.isEnabled()" src="../../../assets/images/text_to_speech.png" alt="Icono activo" />
+      </button>
+      
+
       <li class="nav-item">
         <app-contrast-button> </app-contrast-button>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/">Inicio</a>
+        <a appMouseListener class="nav-link" routerLink="/">Inicio</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/carreras">Carreras</a>
+        <a appMouseListener class="nav-link" routerLink="/carreras">Carreras</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/contacto">Becas</a>
+        <a appMouseListener class="nav-link" routerLink="/contacto">Becas</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/contacto">Nosotros</a>
+        <a appMouseListener class="nav-link" routerLink="/nosotros">Nosotros</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/dudas">Dudas</a>
+        <a appMouseListener class="nav-link" routerLink="/dudas">Dudas</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/exitos">Exitos</a>
+        <a appMouseListener class="nav-link" routerLink="/exitos">Exitos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/contacto">Accesibilidad</a>
+        <a appMouseListener class="nav-link" routerLink="/contacto">Accesibilidad</a>
       </li>
     </ul>
   </div>
