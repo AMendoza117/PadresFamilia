@@ -1,25 +1,33 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
+import { FontSizeService } from '../font-size.service';
 
-import { FontSizeButtonComponent } from './font-resizer.component';
-
-describe('FontSizeButtonComponent', () => {
-  let component: FontSizeButtonComponent;
-  let fixture: ComponentFixture<FontSizeButtonComponent>;
-
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ FontSizeButtonComponent ]
-    })
-    .compileComponents();
-  }));
+describe('FontSizeService', () => {
+  let service: FontSizeService;
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FontSizeButtonComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(FontSizeService);
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+
+  it('should increase font size', () => {
+    const initialFontSize = service.fontSize;
+    service.increaseFontSize();
+    expect(service.fontSize).toBeGreaterThan(initialFontSize);
+  });
+
+  it('should decrease font size', () => {
+    const initialFontSize = service.fontSize;
+    service.decreaseFontSize();
+    expect(service.fontSize).toBeLessThan(initialFontSize);
+  });
+
+  it('should update font size in the document body', () => {
+    const spy = spyOn(document.body.style, 'setProperty');
+    service.updateFontSize();
+    expect(spy).toHaveBeenCalled();
   });
 });

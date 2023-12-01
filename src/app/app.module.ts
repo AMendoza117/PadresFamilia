@@ -13,7 +13,12 @@ import { BreadcrumbComponent } from './componentes/breadcrumb/breadcrumb.compone
 import { HomeComponent } from './componentes/home/home.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { FontSizeButtonComponent } from './font-resizer/font-resizer.component';
-import { FontResizerService } from './services/font-resizer';
+import { ExitosComponent } from './componentes/exitos/exitos.component';
+import { Casoexito1Component } from './componentes/casoexito1/casoexito1.component';
+import { Casoexito2Component } from './componentes/casoexito2/casoexito2.component';
+import { Casoexito3Component } from './componentes/casoexito3/casoexito3.component';
+import { Casoexito4Component } from './componentes/casoexito4/casoexito4.component';
+
 
 
 @NgModule({
@@ -27,7 +32,12 @@ import { FontResizerService } from './services/font-resizer';
     BreadcrumbComponent,
     HomeComponent,
     NosotrosComponent,
-    FontSizeButtonComponent
+    FontSizeButtonComponent,
+    ExitosComponent,
+    Casoexito1Component,
+    Casoexito2Component,
+    Casoexito3Component,
+    Casoexito4Component
   ],
   imports: [
     BrowserModule,

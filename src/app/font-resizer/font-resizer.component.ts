@@ -1,18 +1,28 @@
-// font-size-button.component.ts
-import { Component, HostBinding } from '@angular/core';
+import { Component, OnInit, Renderer2, ElementRef } from '@angular/core';
+import { FontSizeService } from '../font-size.service';
 
 @Component({
-  selector: 'app-font-resizer',
-  template: '<button (click)="toggleFontSize()">Toggle Font Size</button>',
+  selector: 'app-font-size-button',
+  templateUrl: './font-resizer.component.html',
   styleUrls: ['./font-resizer.component.css']
 })
-export class FontSizeButtonComponent {
-  @HostBinding('style.font-size') fontSize: string = '1em';
+export class FontSizeButtonComponent implements OnInit {
 
-  isLargeFont: boolean = false;
+  constructor(
+    private renderer: Renderer2,
+    private el: ElementRef,
+    public fontSizeService: FontSizeService
+  ) {}
 
-  toggleFontSize(): void {
-    this.isLargeFont = !this.isLargeFont;
-    this.fontSize = this.isLargeFont ? '1.2em' : '1em';
+  ngOnInit(): void {
+    // Additional initialization logic if needed
+  }
+
+  increaseFontSize() {
+    this.fontSizeService.increaseFontSize();
+  }
+
+  decreaseFontSize() {
+    this.fontSizeService.decreaseFontSize();
   }
 }

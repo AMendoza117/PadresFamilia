@@ -1,7 +1,6 @@
 // faq.service.ts
 
 import { Injectable } from '@angular/core';
-import { FaqItem } from './../models/faq.model';
 import { FaqItem1 } from '../models/faq1.model';
 
 @Injectable({
