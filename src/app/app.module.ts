@@ -11,18 +11,15 @@ import { CarrerasComponent } from './carreras/carreras.component';
 import { TurismoComponent } from './turismo/turismo.component';
 import { ContrastButtonComponent } from './contrast-button/contrast-button.component';
 import { HomeComponent } from './componentes/home/home.component';
-<<<<<<< HEAD
-import { BotonDudasComponent } from './componentes/boton-dudas/boton-dudas.component';
 import { ModalCorreoComponent } from './modal-correo/modal-correo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalModule } from 'ngx-bootstrap/modal';
-=======
 import { ExitosComponent } from './componentes/exitos/exitos.component';
 import { CasoexitoComponent } from './componentes/casoexito/casoexito.component';
 import { MouseListenerDirective } from './TTS/mouse-listener.directive';
 import { TextToVoiceService } from './TTS/text-to-voice.service';
 import { FormModalComponent } from './form-modal/form-modal.component';
->>>>>>> copia
+import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 
 @NgModule({
   declarations: [
@@ -33,17 +30,14 @@ import { FormModalComponent } from './form-modal/form-modal.component';
     TurismoComponent,
     ContrastButtonComponent,
     HomeComponent,
-<<<<<<< HEAD
-    BotonDudasComponent,
-    ModalCorreoComponent
-=======
+    ModalCorreoComponent,
     ExitosComponent,
     CasoexitoComponent,
     FontSizeButtonComponent,
     MouseListenerDirective,
-    FormModalComponent
-    
->>>>>>> copia
+    FormModalComponent,
+    NosotrosComponent
+
   ],
   imports: [
     BrowserModule,
