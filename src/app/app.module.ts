@@ -12,6 +12,9 @@ import { ContrastButtonComponent } from './contrast-button/contrast-button.compo
 import { BreadcrumbComponent } from './componentes/breadcrumb/breadcrumb.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { BotonDudasComponent } from './componentes/boton-dudas/boton-dudas.component';
+import { ModalCorreoComponent } from './modal-correo/modal-correo.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -23,12 +26,15 @@ import { BotonDudasComponent } from './componentes/boton-dudas/boton-dudas.compo
     ContrastButtonComponent,
     BreadcrumbComponent,
     HomeComponent,
-    BotonDudasComponent
+    BotonDudasComponent,
+    ModalCorreoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

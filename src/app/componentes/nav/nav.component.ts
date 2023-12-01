@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { ModalCorreoComponent } from 'src/app/modal-correo/modal-correo.component';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
-
   ngOnInit(): void {
   }
 
+  bsModalRef: BsModalRef;
+
+  constructor(private modalService: BsModalService) {}
+
+  openModal() {
+    this.bsModalRef = this.modalService.show(ModalCorreoComponent);
+  }
 }
