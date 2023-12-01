@@ -1,0 +1,22 @@
+<div class="container mt-4">
+    <h2 appMouseListener>Nosotros</h2>
+
+    <!-- Lista de preguntas frecuentes -->
+    <div class="accordion" id="accordionExample">
+        <div *ngFor="let faq1 of filteredFaqs1" class="accordion-item">
+            <h2 appMouseListener class="accordion-header" [attr.id]="'heading' + faq1.id">
+                <button appMouseListener class="accordion-button" type="button" [attr.data-bs-toggle]="'collapse'"
+                    [attr.data-bs-target]="'#collapse' + faq1.id" [attr.aria-expanded]="faq1.expanded"
+                    [attr.aria-controls]="'collapse' + faq1.id" (click)="toggleAccordion1(faq1)">
+                    {{ faq1.pregunta }}
+                </button>
+            </h2>
+            <div [attr.id]="'collapse' + faq1.id" class="accordion-collapse collapse"
+                [attr.aria-labelledby]="'heading' + faq1.id" data-bs-parent="#accordionExample">
+                <div appMouseListener class="accordion-body">
+                    {{ faq1.respuesta }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

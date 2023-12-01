@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormModalComponent } from './form-modal/form-modal.component';
+import {Subject}  from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,21 @@ import { FormModalComponent } from './form-modal/form-modal.component';
 })
 export class AppComponent {
   title = 'ExperienciaUsuario';
-
-  constructor() {}
+  fsSubject = new Subject();
+  fsValue = 'fs-11';
+  constructor() {this.fsSubject.subscribe((value:any) => {
+    this.fsValue = ~value.indexOf('fs-') ? value : `fs-${value}`;
+  })
+}
+fsChanged(event) {
+  this.fsSubject.next((event.target.value || 11));
+}
 
   
+isDaltonismEnabled = false;
+
+toggleDaltonismo() {
+  this.isDaltonismEnabled = !this.isDaltonismEnabled;
+}
 
 }

@@ -1,6 +1,6 @@
 
 <div class="container mt-4">
-    <h2 appMouseListener>Preguntas Frecuentes</h2>
+    <h2 appMouseListener class="color">Preguntas Frecuentes</h2>
 
     <!-- Buscador -->
     <div class="input-group mb-3">
@@ -14,8 +14,8 @@
     <!-- Lista de preguntas frecuentes -->
     <div class="accordion" id="accordionExample">
         <div *ngFor="let faq of filteredFaqs" class="accordion-item">
-            <h2 class="accordion-header" [attr.id]="'heading' + faq.id">
-                <button class="accordion-button" type="button" [attr.data-bs-toggle]="'collapse'"
+            <h2 appMouseListener class="accordion-header" [attr.id]="'heading' + faq.id">
+                <button appMouseListener class="accordion-button" type="button" [attr.data-bs-toggle]="'collapse'"
                     [attr.data-bs-target]="'#collapse' + faq.id" [attr.aria-expanded]="faq.expanded"
                     [attr.aria-controls]="'collapse' + faq.id" (click)="toggleAccordion(faq)">
                     {{ faq.pregunta }}
@@ -23,7 +23,7 @@
             </h2>
             <div [attr.id]="'collapse' + faq.id" class="accordion-collapse collapse"
                 [attr.aria-labelledby]="'heading' + faq.id" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
+                <div appMouseListener class="accordion-body">
                     {{ faq.respuesta }}
                 </div>
             </div>

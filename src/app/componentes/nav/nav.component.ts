@@ -23,4 +23,5 @@ export class NavComponent implements OnInit {
   toggleReading(): void {
     this.textToVoiceService.toggleEnabled();
   }
+  
 }

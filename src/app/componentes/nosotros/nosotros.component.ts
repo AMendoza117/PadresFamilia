@@ -24,7 +24,7 @@ export class NosotrosComponent implements OnInit {
   ngOnInit(): void {
     this.faqList1 = this.faq1Service.getFaqs().map((faq, index) => ({ ...faq, id: index + 1, expanded: false }));
     this.filteredFaqs1 = this.faqList1;
-  }
+  } 
 
   toggleAccordion1(faq1: FaqWithState): void {
     faq1.expanded = !faq1.expanded;

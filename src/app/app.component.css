@@ -1,0 +1,28 @@
+p {
+    font-family: Lato;
+  }
+  .fs-11 {
+    p,span, .otherClasses {
+      font-size: 11px;
+    }
+  }
+  .fs-12 {
+    p,span, .otherClasses {
+      font-size: 12px;
+    }
+  }
+  .fs-13 {
+    p,span, .otherClasses {
+      font-size: 13px;
+    }
+  }
+  .fs-14 {
+    p,span, .otherClasses {
+      font-size: 14px;
+    }
+  }
+
+  .daltonism {
+    filter: sepia(50%)
+    contrast(120%);
+  }

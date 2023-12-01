@@ -1,7 +1,7 @@
-<body>
+<body [class.daltonism]="isDaltonismEnabled">
   <app-nav></app-nav>
-  <!-- En el componente que contiene el botón "Llamada a la acción" -->
-  <a appMouseListener href="#" class="btn-flotante" >Ayuda</a>
+  <button (click)="toggleDaltonismo()"> Cambio de color </button>
+  
 
   <router-outlet></router-outlet>
 </body>

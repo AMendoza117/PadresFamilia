@@ -31,13 +31,13 @@ import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
     ContrastButtonComponent,
     HomeComponent,
     ModalCorreoComponent,
-    ExitosComponent,
     CasoexitoComponent,
     FontSizeButtonComponent,
     MouseListenerDirective,
     FormModalComponent,
     NosotrosComponent,
-    FormModalComponent
+    FormModalComponent,
+    ExitosComponent,
   ],
   imports: [
     BrowserModule,
