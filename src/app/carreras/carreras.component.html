@@ -21,7 +21,7 @@
         <div *ngFor="let carrera of carreras" class="mb-3 carrera-card">
             <div class="carrera_tarjeta" *ngIf="carrera.showBusqueda && carrera.showFiltro" [ngClass]="['card', carrera.type]" (click)="redirectToPage(carrera.pagina)" style="display: flex; align-items: center;">
                 <img [src]="carrera.image" alt="{{ carrera.name }}" class="mt-3" style="width: 80%; margin-bottom: 10px;">
-                <h4 class="carrera-text">{{ carrera.name }}</h4>
+                <h4 appMouseListener class="carrera-text" >{{ carrera.name }}</h4>
             </div>
         </div>
     </div>
