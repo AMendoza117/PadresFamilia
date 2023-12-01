@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { ModalCorreoComponent } from 'src/app/modal-correo/modal-correo.component';
-=======
 import { MouseEventsService } from 'src/app/TTS/mouse-events.service';
 import { TextToVoiceService } from 'src/app/TTS/text-to-voice.service';
->>>>>>> copia
 
 @Component({
   selector: 'app-nav',
@@ -14,26 +11,19 @@ import { TextToVoiceService } from 'src/app/TTS/text-to-voice.service';
 })
 export class NavComponent implements OnInit {
 
-<<<<<<< HEAD
   ngOnInit(): void {
   }
 
   bsModalRef: BsModalRef;
 
-  constructor(private modalService: BsModalService) {}
+  constructor(private modalService: BsModalService,
+    public textToVoiceService: TextToVoiceService) {}
 
   openModal() {
     this.bsModalRef = this.modalService.show(ModalCorreoComponent);
-  }
-=======
-  constructor(public textToVoiceService: TextToVoiceService) { }
-
-  ngOnInit(): void {
   }
 
   toggleReading(): void {
     this.textToVoiceService.toggleEnabled();
   }
-
->>>>>>> copia
 }
