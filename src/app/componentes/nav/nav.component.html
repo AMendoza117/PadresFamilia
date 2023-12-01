@@ -13,40 +13,39 @@
 
   <!-- Elementos de la barra de navegación en el lado derecho -->
   <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <!-- Botón para habilitar/deshabilitar la lectura -->
+    <button (click)="toggleReading()" [class.active]="textToVoiceService.isEnabled()" style="border-radius: 50px; margin-right: 10px;" >
+      <img *ngIf="!textToVoiceService.isEnabled()" src="../../../assets/images/text_to_speech.png" alt="Icono inactivo" />
+      <img *ngIf="textToVoiceService.isEnabled()" src="../../../assets/images/text_to_speech.png" alt="Icono activo" />
+    </button>
     <ul class="navbar-nav" style="margin: 10px;">
-      <!-- Botón para habilitar/deshabilitar la lectura -->
-      <button (click)="toggleReading()" [class.active]="textToVoiceService.isEnabled()" style="border-radius: 50px; margin-right: 10px;" >
-        <img *ngIf="!textToVoiceService.isEnabled()" src="../../../assets/images/text_to_speech.png" alt="Icono inactivo" />
-        <img *ngIf="textToVoiceService.isEnabled()" src="../../../assets/images/text_to_speech.png" alt="Icono activo" />
-      </button>
       <li class="nav-item">
         <app-contrast-button> </app-contrast-button>
       </li>
       <li class="nav-item">
-        <a appMouseListener class="nav-link" routerLink="/">Inicio</a>
+        <a class="nav-link" routerLink="/">Inicio</a>
       </li>
       <li class="nav-item">
-        <a appMouseListener class="nav-link" routerLink="/carreras">Carreras</a>
+        <a class="nav-link" routerLink="/carreras">Carreras</a>
       </li>
       <li class="nav-item">
-        <a appMouseListener class="nav-link" routerLink="/contacto">Becas</a>
+        <a class="nav-link" routerLink="/contacto">Becas</a>
       </li>
       <li class="nav-item">
-        <a appMouseListener class="nav-link" routerLink="/nosotros">Nosotros</a>
+        <a class="nav-link" routerLink="/contacto">Nosotros</a>
       </li>
       <li class="nav-item">
-        <a appMouseListener class="nav-link" routerLink="/dudas">Dudas</a>
+        <a class="nav-link" routerLink="/dudas">Dudas</a>
       </li>
       <li class="nav-item">
-        <a appMouseListener class="nav-link" routerLink="/exitos">Exitos</a>
+        <a class="nav-link" routerLink="/contacto">Exitos</a>
       </li>
       <li class="nav-item">
-        <a appMouseListener class="nav-link" routerLink="/contacto">Accesibilidad</a>
+        <a class="nav-link" routerLink="/contacto">Accesibilidad</a>
       </li>
       <li class="nav-item">
-        <button type="button" class="btn btn-primary" (click)="openModal()">Sugerencias</button>
+        <a type="button" class="nav-link" (click)="openModal()">Sugerencias</a>
       </li>
     </ul>
   </div>
 </nav>
-<app-modal-correo></app-modal-correo>

@@ -36,8 +36,8 @@ import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
     FontSizeButtonComponent,
     MouseListenerDirective,
     FormModalComponent,
-    NosotrosComponent
-
+    NosotrosComponent,
+    FormModalComponent
   ],
   imports: [
     BrowserModule,

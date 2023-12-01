@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { ModalCorreoComponent } from 'src/app/modal-correo/modal-correo.component';
+import { MouseEventsService } from 'src/app/TTS/mouse-events.service';
 import { TextToVoiceService } from 'src/app/TTS/text-to-voice.service';
 
 @Component({
@@ -13,9 +14,8 @@ export class NavComponent implements OnInit {
   }
 
   bsModalRef: BsModalRef;
-
   constructor(private modalService: BsModalService, public textToVoiceService: TextToVoiceService) {}
-
+    
   openModal() {
     this.bsModalRef = this.modalService.show(ModalCorreoComponent);
   }
