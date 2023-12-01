@@ -1,0 +1,14 @@
+.active {
+    background-color: #4CAF50;
+    /* Color verde cuando está activo */
+    color: white;
+}
+
+button img {
+    display: block; /* Asegura que la imagen ocupe todo el espacio del botón */
+    margin: 0 auto; /* Centra la imagen horizontalmente en el botón */
+  
+    /* Ajusta el tamaño de la imagen según tus necesidades */
+    width: 30px; /* Puedes ajustar el ancho según tu preferencia */
+    height: auto; /* Mantiene la proporción del tamaño original */
+  }

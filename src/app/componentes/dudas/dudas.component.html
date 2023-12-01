@@ -1,12 +1,13 @@
+
 <div class="container mt-4">
-    <h2>Preguntas Frecuentes</h2>
+    <h2 appMouseListener>Preguntas Frecuentes</h2>
 
     <!-- Buscador -->
     <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Buscar pregunta..."
+        <input appMouseListener type="text" class="form-control" placeholder="Buscar pregunta..."
             (input)="search($event.target.value)" />
         <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" (click)="search('')">Limpiar</button>
+            <button appMouseListener class="btn btn-outline-secondary" type="button" (click)="search('')">Limpiar</button>
         </div>
     </div>
 
