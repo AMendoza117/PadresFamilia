@@ -1,0 +1,17 @@
+<div *ngIf="!showChat" class="chat-toggle" (click)="toggleChat()">Chat</div>
+
+<div class="chat-container" *ngIf="showChat">
+    <div class="chat-header">
+      ¿Dudas? ¡Chatea con nosotros! ­
+      <button class="close-button" (click)="toggleChat()">X</button>
+    </div>
+    <div class="chat-messages">
+      <div *ngFor="let message of messages" [ngClass]="{'user-message': message.type === 'user', 'server-message': message.type === 'server'}">
+        {{ message.content }}
+      </div>
+    </div>
+    <div class="chat-input-container">
+      <input type="text" [(ngModel)]="newMessage" placeholder="Escribe tu mensaje..." />
+      <button (click)="sendMessage()">Enviar</button>
+    </div>
+  </div>

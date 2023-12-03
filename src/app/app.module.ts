@@ -21,6 +21,7 @@ import { TextToVoiceService } from './TTS/text-to-voice.service';
 import { FormModalComponent } from './form-modal/form-modal.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { DaltonismButtonComponent } from './componentes/daltonism-button/daltonism-button.component';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { DaltonismButtonComponent } from './componentes/daltonism-button/daltoni
     FormModalComponent,
     ExitosComponent,
     DaltonismButtonComponent,
+    ChatComponent,
   ],
   imports: [
     BrowserModule,
