@@ -15,15 +15,9 @@ export class AppComponent {
     this.fsValue = ~value.indexOf('fs-') ? value : `fs-${value}`;
   })
 }
+
 fsChanged(event) {
   this.fsSubject.next((event.target.value || 11));
-}
-
-  
-isDaltonismEnabled = false;
-
-toggleDaltonismo() {
-  this.isDaltonismEnabled = !this.isDaltonismEnabled;
 }
 
 }

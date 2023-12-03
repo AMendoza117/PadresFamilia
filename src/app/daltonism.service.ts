@@ -4,6 +4,22 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DaltonismService {
+  public daltonism = false;
 
-  constructor() { }
+  toggleDaltonism(): void {
+    this.daltonism = !this.daltonism;
+    this.updateDaltonism();
+  }
+
+  private updateDaltonism(): void {
+    if (this.daltonism) {
+      document.body.classList.add('daltonism');
+    } else {
+      document.body.classList.remove('daltonism');
+    }
+  }
+
+  get isDaltonism(): boolean {
+    return this.daltonism;
+  }
 }

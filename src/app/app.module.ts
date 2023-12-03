@@ -20,6 +20,7 @@ import { MouseListenerDirective } from './TTS/mouse-listener.directive';
 import { TextToVoiceService } from './TTS/text-to-voice.service';
 import { FormModalComponent } from './form-modal/form-modal.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
+import { DaltonismButtonComponent } from './componentes/daltonism-button/daltonism-button.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
     NosotrosComponent,
     FormModalComponent,
     ExitosComponent,
+    DaltonismButtonComponent,
   ],
   imports: [
     BrowserModule,
