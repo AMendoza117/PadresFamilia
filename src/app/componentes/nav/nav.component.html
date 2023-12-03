@@ -26,29 +26,29 @@
         <app-contrast-button> </app-contrast-button>
       </li>
       <li class="nav-item">
-        <a appMouseListener class="nav-link" routerLink="/">Inicio</a>
+        <a appMouseListener class="nav-link" [class.active]="isInicio" (click)="isIn('inicio')" routerLink="/">Inicio</a>
       </li>
       <li class="nav-item">
-        <a appMouseListener class="nav-link" routerLink="/carreras">Carreras</a>
+        <a appMouseListener class="nav-link" [class.active]="isCarreras" (click)="isIn('carreras')" routerLink="/carreras">Carreras</a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a appMouseListener class="nav-link" routerLink="/becas">Becas</a>
+      </li> -->
+      <li class="nav-item">
+        <a appMouseListener class="nav-link" [class.active]="isNosotros" (click)="isIn('nosotros')" routerLink="/nosotros">Nosotros</a>
       </li>
       <li class="nav-item">
-        <a appMouseListener class="nav-link" routerLink="/nosotros">Nosotros</a>
+        <a appMouseListener class="nav-link" [class.active]="isDudas" (click)="isIn('dudas')" routerLink="/dudas">Dudas</a>
       </li>
       <li class="nav-item">
-        <a appMouseListener class="nav-link" routerLink="/dudas">Dudas</a>
+        <a appMouseListener class="nav-link" [class.active]="isExitos" (click)="isIn('exitos')" routerLink="/exitos">Exitos</a>
       </li>
-      <li class="nav-item">
-        <a appMouseListener class="nav-link" routerLink="/exitos">Exitos</a>
-      </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a appMouseListener class="nav-link" routerLink="/accesibilidad">Accesibilidad</a>
-      </li>
-      <li class="nav-item">
+      </li> -->
+      <!-- <li class="nav-item">
         <a appMouseListener type="button" class="nav-link" (click)="openModal()">Sugerencias</a>
-      </li>
+      </li> -->
     </ul>
   </div>
 </nav>

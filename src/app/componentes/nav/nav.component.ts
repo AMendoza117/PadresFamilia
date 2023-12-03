@@ -10,6 +10,12 @@ import { TextToVoiceService } from 'src/app/TTS/text-to-voice.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
+  isInicio = true;
+  isCarreras = false;
+  isNosotros = false;
+  isDudas = false;
+  isExitos = false;
+  
   ngOnInit(): void {
   }
 
@@ -24,4 +30,31 @@ export class NavComponent implements OnInit {
     this.textToVoiceService.toggleEnabled();
   }
   
+  isIn(site: string){
+    //Cambiar todas las variables a false
+    this.isInicio = false;
+    this.isCarreras = false;
+    this.isNosotros = false;
+    this.isDudas = false;
+    this.isExitos = false;
+    
+    //Cambiar la variable correspondiente a true
+    switch(site){
+      case 'inicio':
+        this.isInicio = true;
+        break;
+      case 'carreras':
+        this.isCarreras = true;
+        break;
+      case 'nosotros':
+        this.isNosotros = true;
+        break;
+      case 'dudas':
+        this.isDudas = true;
+        break;
+      case 'exitos':
+        this.isExitos = true;
+        break;
+    }
+  }
 }
