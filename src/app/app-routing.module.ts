@@ -13,6 +13,7 @@ import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent , data: { breadcrumb: 'Home' } },
+  { path: 'inicio', component: HomeComponent , data: { breadcrumb: 'Home' } },
   { path: 'dudas', component: DudasComponent, data: { breadcrumb: 'Dudas' }},
   { path: 'carreras', component: CarrerasComponent, data: { breadcrumb: 'Carreras' }},
   { path: 'turismo', component: TurismoComponent, data: { breadcrumb: 'Turismo' }},

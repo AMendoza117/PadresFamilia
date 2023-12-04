@@ -1,0 +1,48 @@
+<ng-container *ngIf="activeComponentName === 'Home'">
+
+</ng-container>
+<ng-container *ngIf="activeComponentName === 'Dudas'">
+    <ol class="breadcrumb">
+        <li appMouseListener class="breadcrumb-item"><a (click)="regresarHome()">Inicio</a></li>
+        <li appMouseListener class="breadcrumb-actual active" aria-current="page">­ / Dudas</li>
+    </ol>
+</ng-container>
+<ng-container *ngIf="activeComponentName === 'Carreras'">
+    <ol class="breadcrumb">
+        <li appMouseListener class="breadcrumb-item"><a (click)="regresarHome()">Inicio</a></li>
+        <li appMouseListener class="breadcrumb-actual active" aria-current="page">­ / Carreras</li>
+    </ol>
+</ng-container>
+<ng-container *ngIf="activeComponentName === 'Turismo'">
+    <ol class="breadcrumb">
+        <li appMouseListener class="breadcrumb-item"><a (click)="regresarHome()">Inicio</a></li>
+        <li appMouseListener class="breadcrumb-item"><a (click)="regresarCarreras()">Carreras</a></li>
+        <li appMouseListener class="breadcrumb-actual active" aria-current="page">­ / Turismo</li>
+    </ol>
+</ng-container>
+<ng-container *ngIf="activeComponentName === 'Exitos'">
+    <ol class="breadcrumb">
+        <li appMouseListener class="breadcrumb-item"><a (click)="regresarHome()">Inicio</a></li>
+        <li appMouseListener class="breadcrumb-actual active" aria-current="page">­ / exitos</li>
+    </ol>
+</ng-container>
+<ng-container *ngIf="activeComponentName === 'CasoExito1'">
+    <ol class="breadcrumb">
+        <li appMouseListener class="breadcrumb-item"><a (click)="regresarHome()">Inicio</a></li>
+        <li appMouseListener class="breadcrumb-item"><a (click)="regresarCarreras()">Exitos</a></li>
+        <li appMouseListener class="breadcrumb-actual active" aria-current="page">­ / Caso de exito Alan Enrique</li>
+    </ol>
+</ng-container>
+<ng-container *ngIf="activeComponentName === 'CasoExito2'">
+    <ol class="breadcrumb">
+        <li appMouseListener class="breadcrumb-item"><a (click)="regresarHome()">Inicio</a></li>
+        <li appMouseListener class="breadcrumb-item"><a (click)="regresarCarreras()">Exitos</a></li>
+        <li appMouseListener class="breadcrumb-actual active" aria-current="page">­ / Caso de exito Juan Pablo</li>
+    </ol>
+</ng-container>
+<ng-container *ngIf="activeComponentName === 'Nosotros'">
+    <ol class="breadcrumb">
+        <li appMouseListener class="breadcrumb-item"><a (click)="regresarHome()">Inicio</a></li>
+        <li appMouseListener class="breadcrumb-actual active" aria-current="page">­ / Nosotros</li>
+    </ol>
+</ng-container>

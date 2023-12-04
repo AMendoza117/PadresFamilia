@@ -1,0 +1,123 @@
+body{
+    color: black;
+}
+
+p{
+    color: black;
+}
+
+li{
+    color: black;
+}
+
+a{
+    color: black
+}
+
+.collage-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .collage {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+  }
+  
+  .collage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: inline-block;
+    animation: moveUp 5s infinite cubic-bezier(0.4, 0, 0.2, 1); /* Ajusta la duración según tus necesidades */
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: darkblue;
+    border-radius: 10px;
+    font-size: 3em;
+    font-weight: bold;
+    z-index: 2;
+  }
+  
+  /* Estilos para las pestañas */
+  .nav-tabs {
+    background-color: #fff;
+  }
+  
+  .nav-tabs .nav-link {
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .nav-tabs .nav-link.active {
+    color: #fff;
+    background-color: #007bff; /* Color de resaltado de la pestaña activa */
+  }
+  
+  /* Estilo para el contenido de las pestañas */
+  .tab-content {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Estilo para el botón de descarga */
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+
+  .collage img {
+    width: auto;
+    height: 100%;
+    display: inline-block;
+    animation: moveUp 5s infinite cubic-bezier(0.4, 0, 0.2, 1); /* Ajusta la duración según tus necesidades */
+  }
+  
+  @keyframes moveUp {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-100%);
+    }
+  }
+
+  .breadcrumb {
+    background-color: #fff;
+    padding: 8px 0px;
+    margin-bottom: 0px;
+    border-radius: 0px;
+    font-size: large;
+    width: 100%;
+  }
+
+  .breadcrumb-item{
+    font-size: large;
+    cursor: pointer;
+    color: #007bff;
+  }
+
+  .breadcrumb-actual{
+    font-size: large;
+    cursor: pointer;
+    color: gray;
+  }
+
+  .texto-carrera{
+    font-size: large;
+    color: gray;
+  }
+
+  .titulo-carrera{
+    font-size: x-large;
+    color: #007bff;
+  }

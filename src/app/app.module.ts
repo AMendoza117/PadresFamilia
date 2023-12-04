@@ -22,6 +22,7 @@ import { FormModalComponent } from './form-modal/form-modal.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { DaltonismButtonComponent } from './componentes/daltonism-button/daltonism-button.component';
 import { ChatComponent } from './chat/chat.component';
+import { DynamicContentComponent } from './componentes/dynamic-content/dynamic-content.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { ChatComponent } from './chat/chat.component';
     ExitosComponent,
     DaltonismButtonComponent,
     ChatComponent,
+    DynamicContentComponent,
   ],
   imports: [
     BrowserModule,
