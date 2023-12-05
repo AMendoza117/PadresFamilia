@@ -16,3 +16,8 @@ h4{
 h5{
     color: black;
 }
+.hover-card:hover {
+    transform: scale(1.05); /* Puedes ajustar el valor según tus preferencias */
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave al resaltar */
+}
