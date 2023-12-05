@@ -27,3 +27,8 @@ h2{
         translateY: (-50px);
     }
 }
+
+body{
+    
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/2c/Universidad_Tecnologica_del_Norte_de_Guanajuato_%28UTNG%29%2C_Dolores_Hidalgo%2C_Guanajuato_-_Entrada.jpg");
+}
