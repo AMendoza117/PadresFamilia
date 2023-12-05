@@ -2,8 +2,14 @@
 @import '~@fortawesome/fontawesome-free/css/all.css';
 
 body {
-  background-color: #fff;
-  color: #fff;
+  /*background-color: #fff;
+  color: #fff;*/
+  
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/2c/Universidad_Tecnologica_del_Norte_de_Guanajuato_%28UTNG%29%2C_Dolores_Hidalgo%2C_Guanajuato_-_Entrada.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  color: #131212;
   height: 100vh;
 }
 
