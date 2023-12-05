@@ -1,5 +1,6 @@
 .active {
     background-color: #4CAF50;
+    border-radius: 10px;
     /* Color verde cuando está activo */
     color: white;
 }

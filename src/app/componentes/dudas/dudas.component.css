@@ -1,3 +1,85 @@
+h2{
+    text-align: center;
+}
+
 .color {
     color: black;
+}
+
+.collage-container {
+    position: relative;
+    overflow: hidden;
+    background-image: url(./../../../assets/images/PF.png);
+}
+
+.collage {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+}
+
+.collage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: inline-block;
+    /* Ajusta la duración según tus necesidades */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: darkblue;
+    border-radius: 10px;
+    font-size: 3em;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.collage img {
+    width: auto;
+    height: 100%;
+    display: inline-block;
+    animation: moveUp 5s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    /* Ajusta la duración según tus necesidades */
+}
+
+@keyframes moveUp {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-100%);
+    }
+}
+
+.texto-carrera {
+    font-size: large;
+    color: gray;
+}
+
+.titulo-carrera {
+    font-size: x-large;
+    color: #007bff;
+}
+
+.animated-text {
+    animation: fadeIn 2s ease-in-out; /* Ajusta la duración según tus necesidades */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
